@@ -7,16 +7,19 @@ import javafx.stage.Stage;
 import ru.zelenev.gui.ColorsGrid;
 
 public class ColorsGame extends Application {
+
+    private static final String GAME_TITLE = "Перекраска";
+
     public static void main(String[] args) {
         launch();
     }
 
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) {
         ColorsGrid grid = new ColorsGrid();
         Scene scene = new Scene(grid);
         stage.setScene(scene);
-        stage.setTitle("Таблица с цветными плитками");
+        stage.setTitle(GAME_TITLE);
         stage.show();
     }
 }
